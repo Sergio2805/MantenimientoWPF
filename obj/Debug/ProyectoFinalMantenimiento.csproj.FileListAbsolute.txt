@@ -1,1 +1,14 @@
 C:\Users\Sergio and Clary\Documents\GitHub\ProyectoFinalMantenimiento\bin\Debug\ProyectoFinalMantenimiento.exe.config
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\bin\Debug\ProyectoFinalMantenimiento.exe.config
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\bin\Debug\ProyectoFinalMantenimiento.exe
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\bin\Debug\ProyectoFinalMantenimiento.pdb
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento.csprojResolveAssemblyReference.cache
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\MainWindow.baml
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\App.g.cs
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento_MarkupCompile.cache
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento.g.resources
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento.Properties.Resources.resources
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento.csproj.GenerateResource.Cache
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento.exe
+C:\Users\Eddy\Documents\GitHub\MantenimientoWPF\obj\Debug\ProyectoFinalMantenimiento.pdb

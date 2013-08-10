@@ -1,8 +1,51 @@
 ﻿<Window x:Class="ProyectoFinalMantenimiento.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="713.388" Width="890.79">
+    <Grid HorizontalAlignment="Left" Width="881">
+        <Button Content="Agregar" Height="35" HorizontalAlignment="Left" Margin="539,10,0,0" VerticalAlignment="Top" Width="60" />
+        <Button Content="Eliminar" Height="35" HorizontalAlignment="Left" Margin="604,10,0,0" VerticalAlignment="Top" Width="60" />
+        <Button Content="Actualizar" Height="35" HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Width="60" />
+        <Button Content="Buscar" Height="35" HorizontalAlignment="Left" Margin="734,10,0,0" VerticalAlignment="Top" Width="60" />
+        <Button Content="Salir" Height="35" HorizontalAlignment="Left" Margin="799,10,0,0" VerticalAlignment="Top" Width="60" />
+        <Grid Margin="0,55,0,0" Background="#FFD2E2FF">
+            <GroupBox Header="Órdenes" Height="90" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="843">
+                <Grid>
+                    <Label Content="No. Orden :" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
+                    <Label Content="Fecha Orden :" Height="28" HorizontalAlignment="Left" Margin="271,10,0,0" VerticalAlignment="Top" />
+                    <Label Content="Fecha Requerida :" Height="28" HorizontalAlignment="Left" Margin="544,10,0,0" VerticalAlignment="Top" />
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="369,10,0,0" x:Name="dpOrderDate" VerticalAlignment="Top" Width="150" Text="{Binding OrderDate}" />
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="663,10,0,0" x:Name="dpRequiredDate" VerticalAlignment="Top" Width="150" Text="{Binding RequiredDate}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="96,10,0,0" x:Name="txtOrderID" VerticalAlignment="Top" Width="150" Text="{Binding OrderID}" />
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Envíos" Height="194" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="843">
+                <Grid>
+                    <Label Content="Fecha Envío :" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
+                    <Label Content="Vía Envío :" Height="28" HorizontalAlignment="Left" Margin="271,10,0,0" VerticalAlignment="Top" />
+                    <Label Content="Costo Transporte :" Height="28" HorizontalAlignment="Left" Margin="544,10,0,0" VerticalAlignment="Top" />
+                    <Label Content="Nombre :" Height="28" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" />
+                    <Label Content="Dirección :" Height="28" HorizontalAlignment="Left" Margin="369,60,0,0" VerticalAlignment="Top" />
+                    <Label Content="Ciudad :" Height="28" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" />
+                    <Label Content="Región :" Height="28" HorizontalAlignment="Left" Margin="220,113,0,0" VerticalAlignment="Top" />
+                    <Label Content="Código Postal :" Height="28" HorizontalAlignment="Left" Margin="369,113,0,0" VerticalAlignment="Top" />
+                    <Label Content="País :" Height="28" HorizontalAlignment="Left" Margin="581,113,0,0" VerticalAlignment="Top" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="663,10,0,0" x:Name="txtFreight" VerticalAlignment="Top" Width="150" Text="{Binding Freight}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="96,60,0,0" x:Name="txtShipName" VerticalAlignment="Top" Width="257" Text="{Binding ShipName}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="473,60,0,0" x:Name="txtShipAddress" VerticalAlignment="Top" Width="340" Text="{Binding ShipAddress}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="473,113,0,0" x:Name="txtShipPostalCode" VerticalAlignment="Top" Width="94" Text="{Binding ShipPostalCode}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="96,113,0,0" x:Name="txtShipCity" VerticalAlignment="Top" Width="110" Text="{Binding ShipCity}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="287,116,0,0" x:Name="txtShipRegion" VerticalAlignment="Top" Width="66" Text="{Binding ShipRegion}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="632,113,0,0" x:Name="txtShipCountry" VerticalAlignment="Top" Width="181" Text="{Binding ShipCountry}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="369,10,0,0" x:Name="txtShipVia" VerticalAlignment="Top" Width="150" Text="{Binding ShipVia}" />
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="96,10,0,0" x:Name="txtShippedDate" VerticalAlignment="Top" Width="150" Text="{Binding ShippedDate}" />
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Detalles Órdenes" Height="210" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="843">
+                <DataGrid HorizontalAlignment="Left" Height="187" VerticalAlignment="Top" Width="831" Margin="0,0,0,-1"/>
+            </GroupBox>
+            <Button Content="Aceptar" Height="35" HorizontalAlignment="Left" Margin="716,571,0,0" VerticalAlignment="Top" Width="60" />
+            <Button Content="Cancelar" Height="35" HorizontalAlignment="Left" Margin="793,571,0,0" VerticalAlignment="Top" Width="60" />
+        </Grid>
     </Grid>
 </Window>
