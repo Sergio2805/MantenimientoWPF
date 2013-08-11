@@ -1,14 +1,34 @@
 ﻿<Window x:Class="ProyectoFinalMantenimiento.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="713.388" Width="890.79">
-    <Grid HorizontalAlignment="Left" Width="881">
-        <Button Content="Agregar" Height="35" HorizontalAlignment="Left" Margin="539,10,0,0" VerticalAlignment="Top" Width="60" />
-        <Button Content="Eliminar" Height="35" HorizontalAlignment="Left" Margin="604,10,0,0" VerticalAlignment="Top" Width="60" />
-        <Button Content="Actualizar" Height="35" HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Width="60" />
-        <Button Content="Buscar" Height="35" HorizontalAlignment="Left" Margin="734,10,0,0" VerticalAlignment="Top" Width="60" />
-        <Button Content="Salir" Height="35" HorizontalAlignment="Left" Margin="799,10,0,0" VerticalAlignment="Top" Width="60" />
-        <Grid Margin="0,55,0,0" Background="#FFD2E2FF">
+        Title="Mantenimiento de órdenes" Height="691.388" Width="891.79" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Left" Width="882">
+        <Button Content="" Height="35" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Click="BotonAgregar" BorderThickness="0" ToolTip="Agregar" >
+            <Button.Background>
+                <ImageBrush ImageSource="Properties/Add.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Height="35" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" Width="40" Click="BotonEliminar" ToolTip="Eliminar" BorderThickness="0" >
+            <Button.Background>
+                <ImageBrush ImageSource="Properties/Delete.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Height="35" HorizontalAlignment="Left" Margin="120,10,0,0" VerticalAlignment="Top" Width="40" Click="BotonActualizar" ToolTip="Modificar" BorderThickness="0" >
+            <Button.Background>
+                <ImageBrush ImageSource="Properties/Modify.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Height="35" HorizontalAlignment="Left" Margin="175,10,0,0" VerticalAlignment="Top" Width="40" Click="BotonBuscar" ToolTip="Buscar" BorderThickness="0" >
+            <Button.Background>
+                <ImageBrush ImageSource="Properties/Search.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Height="35" HorizontalAlignment="Left" Margin="230,10,0,0" VerticalAlignment="Top" Width="40" Click="BotonSalir" ToolTip="Salir" BorderThickness="0" >
+            <Button.Background>
+                <ImageBrush ImageSource="Properties/Exit.png"/>
+            </Button.Background>
+        </Button>
+        <Grid Margin="0,50,0,0" Background="#FF84BCFF" Visibility="Hidden" x:Name="gridFormulario">
             <GroupBox Header="Órdenes" Height="90" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="843">
                 <Grid>
                     <Label Content="No. Orden :" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
@@ -16,7 +36,7 @@
                     <Label Content="Fecha Requerida :" Height="28" HorizontalAlignment="Left" Margin="544,10,0,0" VerticalAlignment="Top" />
                     <DatePicker Height="25" HorizontalAlignment="Left" Margin="369,10,0,0" x:Name="dpOrderDate" VerticalAlignment="Top" Width="150" Text="{Binding OrderDate}" />
                     <DatePicker Height="25" HorizontalAlignment="Left" Margin="663,10,0,0" x:Name="dpRequiredDate" VerticalAlignment="Top" Width="150" Text="{Binding RequiredDate}" />
-                    <TextBox Height="25" HorizontalAlignment="Left" Margin="96,10,0,0" x:Name="txtOrderID" VerticalAlignment="Top" Width="150" Text="{Binding OrderID}" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="96,10,0,0" x:Name="txtOrderID" VerticalAlignment="Top" Width="150" Text="{Binding OrderID}" IsEnabled="False" />
                 </Grid>
             </GroupBox>
             <GroupBox Header="Envíos" Height="194" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="843">
@@ -44,8 +64,48 @@
             <GroupBox Header="Detalles Órdenes" Height="210" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="843">
                 <DataGrid HorizontalAlignment="Left" Height="187" VerticalAlignment="Top" Width="831" Margin="0,0,0,-1"/>
             </GroupBox>
-            <Button Content="Aceptar" Height="35" HorizontalAlignment="Left" Margin="716,571,0,0" VerticalAlignment="Top" Width="60" />
-            <Button Content="Cancelar" Height="35" HorizontalAlignment="Left" Margin="793,571,0,0" VerticalAlignment="Top" Width="60" />
+            <Button Content="" Height="35" HorizontalAlignment="Left" Margin="769,559,0,0" VerticalAlignment="Top" Width="40" BorderThickness="0" ToolTip="Aceptar" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Properties/Save.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="" Height="35" HorizontalAlignment="Left" Margin="823,559,0,0" VerticalAlignment="Top" Width="40" Click="BotonCancelar" BorderThickness="0" ToolTip="Cancelar" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Properties/Delete.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
+        <Grid HorizontalAlignment="Left" Height="115" Margin="0,50,0,0" VerticalAlignment="Top" Width="882" Background="#FF84BCFF" x:Name="gridBuscar">
+            <Label Content="BUSCAR" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Verdana" />
+            <TextBox Height="25" HorizontalAlignment="Left" Margin="132,53,0,0" x:Name="txtBuscar" VerticalAlignment="Top" Width="150" />
+            <Button Content="" Height="35" HorizontalAlignment="Left" Margin="287,46,0,0" VerticalAlignment="Top" Width="40" Click="BuscarFormulario" BorderThickness="0" ToolTip="Buscar orden" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Properties/Load.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Ingrese un OrderID :" Height="28" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" />
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="115" Margin="0,50,0,0" VerticalAlignment="Top" Width="882" Background="#FF84BCFF" x:Name="gridEliminar" Visibility="Hidden">
+            <Label Content="ELIMINAR" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Verdana" />
+            <TextBox Height="25" HorizontalAlignment="Left" Margin="132,53,0,0" x:Name="txtEliminar" VerticalAlignment="Top" Width="150" />
+            <Button Content="" Height="35" HorizontalAlignment="Left" Margin="287,46,0,0" VerticalAlignment="Top" Width="40" Click="EliminarOrden" BorderThickness="0" ToolTip="Eliminar orden" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Properties/Delete.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Ingrese un OrderID :" Height="28" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" />
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="115" Margin="0,50,0,0" VerticalAlignment="Top" Width="882" Background="#FF84BCFF" x:Name="gridActualizar" Visibility="Hidden">
+            <Label Content="ACTUALIZAR" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Verdana" />
+            <TextBox Height="25" HorizontalAlignment="Left" Margin="132,53,0,0" x:Name="txtActualizar" VerticalAlignment="Top" Width="150" />
+            <Button Content="" Height="35" HorizontalAlignment="Left" Margin="287,46,0,0" VerticalAlignment="Top" Width="40" Click="BuscarFormulario" BorderThickness="0" ToolTip="Actualizar orden" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Properties/Load.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Ingrese un OrderID :" Height="28" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" />
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="211" Margin="457,431,0,0" VerticalAlignment="Top" Width="400" Source="Properties/Logo.png" x:Name="imgLogo" />
+        <Image HorizontalAlignment="Left" Height="220" Margin="20,254,0,0" VerticalAlignment="Top" Width="452" Source="Properties/Integrantes.png" x:Name="imgIntegrantes"/>
     </Grid>
 </Window>
